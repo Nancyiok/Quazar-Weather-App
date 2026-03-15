@@ -36,29 +36,27 @@ watch(
 </script>
 
 <template>
-  <div>
+  <section class="fade-in flex column justify-center gap-30">
     <div v-if="loading" class="absolute-full flex flex-center">
       <q-spinner size="40px" color="primary" />
     </div>
 
-    <section v-else-if="todayWeatherData?.name && forecastData?.list" class="fade-in">
-      <div class="flex column justify-center items-center gap-30">
-        <div class="text-h3 line-height-1 align-self-left">
-          Weather in <span class="text-primary text-h1">{{ todayWeatherData.name }}</span> today
-        </div>
-        <CityWeatherCard :weatherCityData="todayWeatherData" />
-        <TodayWeatherDetails :weather="todayWeatherData" />
-        <div class="text-h3 line-height-1 align-self-left">Forecast</div>
-        <TemperatureChart :forecast="forecastData?.list" />
+    <div v-else-if="todayWeatherData?.name && forecastData?.list" class="flex column justify-center items-center gap-30">
+      <div class="text-h3 line-height-1 align-self-left">
+        Weather in <span class="text-primary text-h1">{{ todayWeatherData.name }}</span> today
       </div>
-    </section>
+      <CityWeatherCard :weatherCityData="todayWeatherData" />
+      <TodayWeatherDetails :weather="todayWeatherData" />
+      <div class="text-h3 line-height-1 align-self-left">Forecast</div>
+      <TemperatureChart :forecast="forecastData?.list" />
+    </div>
 
     <div v-else class="absolute-full flex flex-center">
       <p class="text-uppercase text-primary text-h4">
         City not found or no data available
       </p>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped lang="scss">
@@ -73,11 +71,9 @@ watch(
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(20px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 

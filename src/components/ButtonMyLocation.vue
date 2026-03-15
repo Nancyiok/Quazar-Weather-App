@@ -3,7 +3,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter();
 const getUserLocation =  () => {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(pushPositionToUrl, (error) => {
+    navigator.geolocation.getCurrentPosition(pushPositionToUrl as (position: GeolocationPosition) => void, (error) => {
       console.error("Error getting location:", error);
       alert("Unable to retrieve your location. Please allow location access and try again.");
     });

@@ -34,7 +34,8 @@ const getWeatherCityPhoto = async (city: string) => {
       per_page: 1,
     },
   });
-  return data.photos[0]?.src?.landscape || '' as unknown as string;
+  const photos = data.photos;
+  return photos[0]?.src?.landscape || ('' as unknown as string);
 }
 
 export { getTodayWeather, getWeatherForecast,  getWeatherCityPhoto };

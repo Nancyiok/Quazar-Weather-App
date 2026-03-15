@@ -1,7 +1,6 @@
 @import "_reset.scss";
 @import "_typography.scss";
 
-body{
-  background: $app-background;
+body {
+  background: $app-background no-repeat center center fixed;
 }
-

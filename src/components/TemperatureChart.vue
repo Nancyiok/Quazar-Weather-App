@@ -64,7 +64,7 @@ const chartOptions = {
       text: 'Temperature in °C',
       font: {
         size: 16,
-        weight: '500',
+        weight: 500,
       },
       color: '#000000',
       padding: { bottom: 20 },
@@ -98,7 +98,7 @@ const chartOptions = {
         tooltipEl.innerHTML = `
   <div style="max-width: 250px;">
     <div>
-      <div style="font-weight: bold; font-size: 14px;">${new Date(dataItem.dt * 1000).toLocaleString()}</div>
+      <div style="font-weight: 600; font-size: 14px;">${new Date(dataItem.dt * 1000).toLocaleString()}</div>
       <div>Temp: ${Math.ceil(dataItem.main.temp)} °C</div>
       <div>Feels like: ${Math.ceil(dataItem.main.feels_like)} °C</div>
       <img src="${iconUrl}"
@@ -119,7 +119,7 @@ const chartOptions = {
       beginAtZero: false,
       grid: { display: false },
       ticks: {
-        callback: (value: any) => `${value}°`,
+        callback: (value: string) => `${value}°`,
         color: '#000000',
       },
     },

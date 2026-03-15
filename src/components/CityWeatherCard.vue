@@ -1,25 +1,20 @@
 <script setup lang="ts">
-import { getWeatherCityPhoto } from 'src/services/weather.service'
-import { WEATHER_ICONS_MAP } from 'src/constants/weatherIcons'
-import { watch, ref } from 'vue'
-const props = defineProps(['weatherCityData'])
-const weatherCityPhoto = ref('')
+import { getWeatherCityPhoto } from 'src/services/weather.service';
+import { WEATHER_ICONS_MAP } from 'src/constants/weatherIcons';
+import { watch, ref } from 'vue';
+const props = defineProps(['weatherCityData']);
+const weatherCityPhoto = ref('');
 watch(
   () => props.weatherCityData,
   async (newCity) => {
-    if (!newCity?.name) return
-    weatherCityPhoto.value = await getWeatherCityPhoto(newCity.name)
+    if (!newCity?.name) return;
+    weatherCityPhoto.value = await getWeatherCityPhoto(newCity.name);
   },
-  { immediate: true }
-)
+  { immediate: true },
+);
 </script>
 <template>
-  <q-img
-    :src="weatherCityPhoto"
-    no-spinner
-    class="city-img fade-in"
-    :img-style="{ objectPosition: 'bottom' }"
-  >
+  <q-img :src="weatherCityPhoto" class="city-img fade-in" spinner-color="accent">
     <div class="text-h5 line-height-1 absolute-bottom text-white q-pa-md fade-in-text">
       <div class="text-h2">{{ Math.round(weatherCityData.main?.temp ?? 0) }}°C</div>
       <div class="text-h6">

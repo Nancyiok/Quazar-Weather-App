@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Weather tracking app",
   "productName": "Weather app",
-  "author": "Anastasiia Kurdiukova <anastasiia.kurdiukova@cleveroad.com>",
+  "author": "Anastasiia Kurdiukova group: 122-23-1",
   "type": "module",
   "private": true,
   "scripts": {
