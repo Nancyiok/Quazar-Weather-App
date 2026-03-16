@@ -6,8 +6,8 @@ import ButtonMyLocation from './ButtonMyLocation.vue';
 <template>
   <div class="flex page-header items-center q-gutter-md justify-end q-pa-lg">
     <SearchInput />
-    <ButtonMyLocation />
   </div>
+  <ButtonMyLocation />
 </template>
 <style scoped lang="scss">
 .page-header {

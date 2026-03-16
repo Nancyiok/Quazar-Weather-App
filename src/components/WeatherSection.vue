@@ -59,7 +59,7 @@ watch(
       <TemperatureChart :forecast="forecastData?.list" />
     </div>
 
-    <div v-else class="absolute-full flex flex-center">
+    <div v-else class="absolute-full flex flex-center fade-in">
       <p class="text-uppercase text-primary title text-center q-px-sm">
         City not found or no data available
       </p>

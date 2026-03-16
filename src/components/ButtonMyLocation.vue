@@ -31,14 +31,23 @@ const pushPositionToUrl = async (position: GeolocationPosition) => {
 
 <template>
   <q-btn
-    icon="my_location"
-    flat
+    color="accent"
     text-color="primary"
     round
-    class="q-pa-xs"
-    style="width: 40px; height: 40px"
+    unelevated
+    class="q-pa-xs sticky"
+    style="width: 30px; height: 30px"
     @click="getUserLocation"
-  />
+  >
+    <q-icon name="my_location" size="30px" />
+  </q-btn>
 </template>
 
-
+<style scoped>
+.sticky {
+  position: sticky;
+  top: 120px;
+  left: 20px;;
+  z-index: 100;
+}
+</style>
