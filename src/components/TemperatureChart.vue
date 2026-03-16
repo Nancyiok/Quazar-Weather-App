@@ -48,7 +48,7 @@ const chartData = computed(() => ({
       tension: 0.4,
       pointBackgroundColor: 'rgba(255, 255, 255, 0.9)',
       borderWidth: isMobile() ? 3.5 : 3,
-      pointRadius: isMobile() ? 5 : 4,
+      pointRadius: isMobile() ? 8 : 4,
       pointHoverRadius: isMobile() ? 6 : 7,
     },
   ],
