@@ -13,9 +13,16 @@ const updateParamsDebounced = debounce(async (value: string) => {
 }, 300);
 
 watch(localSearch, (newValue) => {
-  if(typeof newValue !== 'string') return;
+  if (typeof newValue !== 'string') return;
   updateParamsDebounced(newValue);
 });
+
+watch(
+  () => route.query.q,
+  (newQuery) => {
+    localSearch.value = (newQuery as string) || '';
+  },
+);
 </script>
 
 <template>

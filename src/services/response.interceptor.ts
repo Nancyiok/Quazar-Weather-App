@@ -13,7 +13,7 @@ const responseInterceptor = (instance: AxiosInstance) => {
       } else if (error.request) {
         errorMessage = error.message;
       } else {
-        console.log('Error', error.message);
+        console.error('Error', error.message);
       }
       console.error(errorMessage);
       return errorMessage;

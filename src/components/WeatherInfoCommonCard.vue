@@ -6,12 +6,9 @@
   </q-card>
 </template>
 
-<script setup lang="ts">
-</script>
-
 <style scoped lang="scss">
 .card {
-  background-color: #DAEAEA;
+  background-color: #daeaea;
   border: 1px solid $primary;
   border-radius: 10px;
 }

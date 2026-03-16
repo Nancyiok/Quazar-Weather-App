@@ -17,39 +17,40 @@ const pressure = props.weather.main.pressure;
 </script>
 
 <template>
- <WeatherInfoCommonCard>
-  <div class="weather-card-container">
-    <div class="weather-item">
-      <q-icon name="wb_sunny" size="50px" color="accent" />
-      <p class="text-p">Sunrise: {{ sunrise }}</p>
+  <WeatherInfoCommonCard>
+    <div class="weather-card-container">
+      <div class="weather-item">
+        <q-icon name="wb_sunny" size="50px" color="accent" />
+        <p class="text-p">Sunrise: {{ sunrise }}</p>
+      </div>
+      <div class="weather-item">
+        <q-icon name="nights_stay" size="50px" color="accent" />
+        <p class="text-p">Sunset: {{ sunset }}</p>
+      </div>
+      <div class="weather-item">
+        <q-icon name="air" size="50px" color="accent" />
+        <p class="text-p">Wind: {{ windSpeed }} m/s, {{ windDeg }}°</p>
+      </div>
+      <div class="weather-item">
+        <q-icon name="visibility" size="50px" color="accent" />
+        <p class="text-p">Visibility: {{ visibility }} m</p>
+      </div>
+      <div class="weather-item">
+        <q-icon name="water_drop" size="50px" color="accent" />
+        <p class="text-p">Humidity: {{ humidity }}%</p>
+      </div>
+      <div class="weather-item">
+        <q-icon name="bar_chart" size="50px" color="accent" />
+        <p class="text-p">Pressure: {{ pressure }} hPa</p>
+      </div>
     </div>
-    <div class="weather-item">
-      <q-icon name="nights_stay" size="50px" color="accent" />
-      <p class="text-p">Sunset: {{ sunset }}</p>
-    </div>
-    <div class="weather-item">
-      <q-icon name="air" size="50px" color="accent" />
-      <p class="text-p">Wind: {{ windSpeed }} m/s, {{ windDeg }}°</p>
-    </div>
-    <div class="weather-item">
-      <q-icon name="visibility" size="50px" color="accent" />
-      <p class="text-p">Visibility: {{ visibility }} m</p>
-    </div>
-    <div class="weather-item">
-      <q-icon name="water_drop" size="50px" color="accent" />
-      <p class="text-p">Humidity: {{ humidity }}%</p>
-    </div>
-    <div class="weather-item">
-      <q-icon name="bar_chart" size="50px" color="accent" />
-      <p class="text-p">Pressure: {{ pressure }} hPa</p>
-    </div>
-  </div>
-</WeatherInfoCommonCard>
+  </WeatherInfoCommonCard>
 </template>
 <style scoped>
 .card {
   gap: 30px;
 }
+
 .weather-card-container {
   display: flex;
   flex-wrap: wrap;
@@ -72,4 +73,3 @@ const pressure = props.weather.main.pressure;
   }
 }
 </style>
-
