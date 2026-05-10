@@ -16,6 +16,20 @@ node_modules
 # Capacitor related directories and files
 /src-capacitor/www
 /src-capacitor/node_modules
+/src-capacitor/package-lock.json
+/src-capacitor/android/build
+/src-capacitor/android/.gradle
+/src-capacitor/android/local.properties
+/src-capacitor/android/captures
+/src-capacitor/android/app/build
+/src-capacitor/android/app/release
+/src-capacitor/android/app/src/main/assets/public
+/src-capacitor/android/app/src/main/assets/capacitor.config.json
+/src-capacitor/android/app/src/main/assets/capacitor.plugins.json
+/src-capacitor/android/capacitor-cordova-android-plugins
+/src-capacitor/ios/App/Pods
+/src-capacitor/ios/App/build
+/src-capacitor/ios/DerivedData
 
 # Log files
 npm-debug.log*

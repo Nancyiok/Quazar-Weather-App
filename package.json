@@ -16,6 +16,11 @@
     "postinstall": "quasar prepare"
   },
   "dependencies": {
+    "@capacitor/android": "^8.3.3",
+    "@capacitor/app": "^8.1.0",
+    "@capacitor/cli": "^8.3.3",
+    "@capacitor/core": "^8.3.3",
+    "@capacitor/geolocation": "^8.2.0",
     "@quasar/extras": "^1.16.4",
     "axios": "^1.2.1",
     "chart.js": "^4.5.1",

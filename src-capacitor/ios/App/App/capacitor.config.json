@@ -1,0 +1,9 @@
+{
+	"appId": "weather.app",
+	"appName": "Weather app",
+	"webDir": "www",
+	"packageClassList": [
+		"AppPlugin",
+		"GeolocationPlugin"
+	]
+}
